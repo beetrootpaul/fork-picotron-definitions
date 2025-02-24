@@ -230,7 +230,83 @@ function Userdata:div(src, dest, src_offset, dest_offset, len, src_stride, dest_
 ---@param dest_stride number?
 ---@param spans number?
 ---@return Userdata
+function Userdata:idiv(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+---Applies operator to each element and written to a new userdata. All parameters are optional.
+---
+---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_op)
+---@param src Userdata|number?
+---@param dest Userdata|boolean?
+---@param src_offset number?
+---@param dest_offset number?
+---@param len number?
+---@param src_stride number?
+---@param dest_stride number?
+---@param spans number?
+---@return Userdata
 function Userdata:mod(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+---Applies operator to each element and written to a new userdata. All parameters are optional.
+---
+---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_op)
+---@param src Userdata|number?
+---@param dest Userdata|boolean?
+---@param src_offset number?
+---@param dest_offset number?
+---@param len number?
+---@param src_stride number?
+---@param dest_stride number?
+---@param spans number?
+---@return Userdata
+function Userdata:pow(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+---Applies operator to each element and written to a new userdata. All parameters are optional.
+---
+---abs(x) for each element (except: int_min -> int_min, not int_max)
+---
+---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_op)
+---@param src Userdata|number?
+---@param dest Userdata|boolean?
+---@param src_offset number?
+---@param dest_offset number?
+---@param len number?
+---@param src_stride number?
+---@param dest_stride number?
+---@param spans number?
+---@return Userdata
+function Userdata:abs(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+---Applies operator to each element and written to a new userdata. All parameters are optional.
+---
+---returns -1 for negative values and 1 for positive values and zero
+---
+---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_op)
+---@param src Userdata|number?
+---@param dest Userdata|boolean?
+---@param src_offset number?
+---@param dest_offset number?
+---@param len number?
+---@param src_stride number?
+---@param dest_stride number?
+---@param spans number?
+---@return Userdata
+function Userdata:sgn(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
+
+---Applies operator to each element and written to a new userdata. All parameters are optional.
+---
+---returns -1 for negative values and 1 for positive values, and 0 for zero
+---
+---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_op)
+---@param src Userdata|number?
+---@param dest Userdata|boolean?
+---@param src_offset number?
+---@param dest_offset number?
+---@param len number?
+---@param src_stride number?
+---@param dest_stride number?
+---@param spans number?
+---@return Userdata
+function Userdata:sgn0(src, dest, src_offset, dest_offset, len, src_stride, dest_stride, spans) end
 
 ---Applies operator to each element and written to a new userdata. All parameters are optional.
 ---
@@ -306,7 +382,7 @@ function Userdata:min(src, dest, src_offset, dest_offset, len, src_stride, dest_
 ---
 ---When :copy is given a table as the first argument (after self), it is taken to be a lookup table into that userdata for the start of each span.
 ---
----This form will be deprecated in 0.1.2 -- use :take instead with the same parameters.
+---This form will be **deprecated in 0.1.2** -- use :take() instead with the same parameters.
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_copy)
 ---@param idx Userdata|number?
@@ -348,9 +424,21 @@ function Userdata:take(idx, dest, idx_offset, dest_offset, len, idx_stride, dest
 ---@param m0 Userdata|number
 ---@param m1 Userdata|number
 ---@param m_out any?
+---@return Userdata
 function matmul(m0, m1, m_out) end
 
 Userdata.matmul = matmul
+
+---For 2d 4x4 transformation matrices, matmul2d can be used.
+---
+---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#matmul)
+---@param m0 Userdata|number
+---@param m1 Userdata|number
+---@param m_out any?
+---@return Userdata
+function matmul2d(m0, m1, m_out) end
+
+Userdata.matmul2d = matmul2d
 
 ---For 3d 4x4 transformation matrices, matmul3d can be used.
 ---
@@ -358,9 +446,17 @@ Userdata.matmul = matmul
 ---@param m0 Userdata|number
 ---@param m1 Userdata|number
 ---@param m_out any?
+---@return Userdata
 function matmul3d(m0, m1, m_out) end
 
 Userdata.matmul3d = matmul3d
+
+---Transpose any type of matrices
+---
+---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#Matrix_methods)
+---@param m_out any?
+---@return Userdata
+function transpose(m_out) end
 
 --------------------------------------------------------------------------------
 --- Userdata Memory Functions

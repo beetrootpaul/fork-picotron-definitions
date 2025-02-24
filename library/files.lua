@@ -91,4 +91,6 @@ function fstat(filename) end
 ---Load and run a lua file.
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#include)
+---@param filename string
+---@return any
 function include(filename) end

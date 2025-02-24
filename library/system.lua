@@ -45,3 +45,21 @@ function t() end
 ---@param delta number --  number of seconds to add to t.
 ---@return string
 function date(format, t, delta) end
+
+---Read the contents of the clipboard. The value is always a single string;
+---
+---to copy structured objects to the clipboard, use pod() and unpod().
+---
+---For security reasons, get_clipboard() only has access to the host clipboard after ctrl-v is pressed while Picotron is active. Until ctrl-v is pressed, changes to the host clipboard have no effect on the return value of get_clipboard(). The same is true for sandboxed applications (e.g. bbs carts): they are only able to access clipboard contents from other processes once ctrl-v is pressed while that app has keyboard focus.
+---
+---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#get_clipboard)
+---@return string
+function get_clipboard() end
+
+---Write the contents of the clipboard. The value is always a single string;
+---
+------to copy structured objects to the clipboard, use pod() and unpod().
+---
+---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#set_clipboard)
+---@param text string
+function set_clipboard(text) end
