@@ -25,22 +25,14 @@ function vec(...) end
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#Userdata)
 ---@class Userdata
-Userdata = {}
-
----@type number
-Userdata.x = 0
----@type number
-Userdata.y = 0
----@type number
-Userdata.z = 0
----@type number
-Userdata.u = 0
----@type number
-Userdata.v = 0
----@type number
-Userdata.w = 0
----@type number
-Userdata.t = 0
+---@field x number the 1st element of a userdata
+---@field y number the 2nd element of a userdata
+---@field z number the 3rd element of a userdata
+---@field u number the 4th element of a userdata
+---@field v number the 5th element of a userdata
+---@field w number the 6th element of a userdata
+---@field t number the 7th element of a userdata
+local Userdata = {}
 
 ---Return the width of the userdata
 ---

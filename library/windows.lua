@@ -18,30 +18,46 @@ function set_draw_target(ud) end
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#get_draw_target)
 function get_draw_target() end
 
----@class window
----@field width number            --  width in pixels (not including the frame)
----@field height number           --  height in pixels
----@field title string            --  set a title displayed on the window's titlebar
----@field pauseable boolean       --  false to turn off the app menu that normally comes up with ENTER
----@field tabbed boolean          --  true to open in a tabbed workspace (like the code editor)
----@field has_frame boolean       --  default: true
----@field moveable boolean        --  default: true
----@field resizeable boolean      --  default: true
----@field wallpaper boolean       --  act as a wallpaper (z defaults to -1000 in that case)
----@field autoclose boolean       --  close window when is no longer in focus or when press escape
----@field z number                --  windows with higher z are drawn on top. Defaults to 0
----@field cursor number|userdata  --  0 for no cursor, 1 for default, or a userdata for a custom cursor
-
 ---Create a window and/or set the window's attributes.
 ---
 ---attribs is table of desired attributes for the window.
----
+---```
+---width      --  width in pixels (not including the frame)
+---height     --  height in pixels
+---title      --  set a title displayed on the window's titlebar
+---pauseable  --  false to turn off the app menu that normally comes up with ENTER
+---tabbed     --  true to open in a tabbed workspace (like the code editor)
+---has_frame  --  default: true
+---moveable   --  default: true
+---resizeable --  default: true
+---wallpaper  --  act as a wallpaper (z defaults to -1000 in that case)
+---autoclose  --  close window when is no longer in focus or when press escape
+---z          --  windows with higher z are drawn on top. Defaults to 0
+---cursor     --  0 for no cursor, 1 for default, or a userdata for a custom cursor
+---squashable --  window resizes itself to stay within the desktop region
+---```
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#window)
 ---@param attribs table
 function window(attribs) end
 
 ---Create a window and/or set the window's attributes.
 ---
+---attribs is table of desired attributes for the window.
+---```
+---width      --  width in pixels (not including the frame)
+---height     --  height in pixels
+---title      --  set a title displayed on the window's titlebar
+---pauseable  --  false to turn off the app menu that normally comes up with ENTER
+---tabbed     --  true to open in a tabbed workspace (like the code editor)
+---has_frame  --  default: true
+---moveable   --  default: true
+---resizeable --  default: true
+---wallpaper  --  act as a wallpaper (z defaults to -1000 in that case)
+---autoclose  --  close window when is no longer in focus or when press escape
+---z          --  windows with higher z are drawn on top. Defaults to 0
+---cursor     --  0 for no cursor, 1 for default, or a userdata for a custom cursor
+---squashable --  window resizes itself to stay within the desktop region
+---```
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#window)
 ---@param width number
 ---@param height number

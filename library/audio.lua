@@ -1,3 +1,5 @@
+---@meta
+
 ---Play sfx n (0..63) on channel (0..15) from note offset (0..63 in notes) for length notes.
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#sfx)
