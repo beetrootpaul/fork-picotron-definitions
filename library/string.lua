@@ -1,5 +1,21 @@
 ---@meta
 
+---Convert VAL to a string.
+---
+---[View Online](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#TOSTR)
+---@param val any
+---@param format_flags number?
+---@return string
+function tostr(val, format_flags) end
+
+---Converts VAL to a number.
+---
+---[View Online](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#TONUM)
+---@param val any
+---@param format_flags number?
+---@return number
+function tonum(val, format_flags) end
+
 ---Convert one or more ordinal character codes to a string.
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#chr)
