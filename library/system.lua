@@ -3,7 +3,7 @@
 ---print a string to the host operating system's console for debugging.
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#printh)
----@param str string
+---@param str any
 function printh(str) end
 
 ---Returns a table of environment variables given to the process at the time of creation.

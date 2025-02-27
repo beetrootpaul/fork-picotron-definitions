@@ -92,7 +92,7 @@ function fget(n, f) end
 ---?"hi"
 ---```
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#print)
----@param str string
+---@param str any
 ---@param x number
 ---@param y number
 ---@param col number?
@@ -110,7 +110,7 @@ function print(str, x, y, col) end
 ---print returns the right-most x position that occurred while printing. this can be used to find out the width of some text by printing it off-screen.
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#print)
----@param str string
+---@param str any
 ---@param col number?
 ---@return number
 function print(str, col) end
