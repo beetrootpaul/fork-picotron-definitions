@@ -270,8 +270,8 @@ function pal(c0, c1, p) end
 ---palt() resets to default: all colours opaque except colour 0. Same as palt(1)
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#palt)
----@param c number
----@param is_transparent boolean
+---@param c? number
+---@param is_transparent? boolean
 function palt(c, is_transparent) end
 
 ---Draw sprite s at position x,y
