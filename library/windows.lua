@@ -67,7 +67,8 @@ function window(attribs) end
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#window)
 ---@param width number
 ---@param height number
-function window(width, height) end
+---@param attribs? window
+function window(width, height, attribs) end
 
 ---Set a fullscreen video mode. Currently supported modes:
 ---- vid(0): 480x270
