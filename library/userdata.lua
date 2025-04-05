@@ -60,7 +60,17 @@ function Userdata:attribs() end
 ---@return number
 function Userdata:get(x, y, n) end
 
----Set one or more value starting at x (or x, y for 2d userdata).
+---Return n values starting at x (or x, y for 2d userdata), or 0 if out of range.
+---
+---[View Online under `userdata:set()`](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_set)
+---@param u Userdata
+---@param x number
+---@param y number?
+---@param n number
+---@return number
+function get(u, x, y, n) end
+
+---Set one or more values starting at x (or x, y for 2d userdata).
 ---
 ---Values set at locations out of range are clipped and have no effect.
 ---
@@ -70,6 +80,20 @@ function Userdata:get(x, y, n) end
 ---@param val0 any
 ---@param ... any
 function Userdata:set(x, y, val0, ...) end
+
+---Set one or more values starting at x (or x, y for 2d userdata).
+---
+---Values set at locations out of range are clipped and have no effect.
+---
+---When the global set() is passed a nil userdata, no error or action is performed.
+---
+---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#userdata_set)
+---@param u Userdata
+---@param x number
+---@param y number?
+---@param val0 any
+---@param ... any
+function set(u, x, y, val0, ...) end
 
 ---Return a row of a 2d userdata (0 is the first row), or nil when out of range.
 ---
