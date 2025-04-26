@@ -1,5 +1,8 @@
 ---@meta
 
+---@class table: { [unknown]: any }
+---@class table<K, V>: { [K]: V }
+
 ---Add value val to the end of table tbl.
 ---
 ---If index is given then the element is inserted at that position.
@@ -56,5 +59,8 @@ function foreach(tbl, func) end
 ---Order is not guaranteed.
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#pairs)
----@param tbl table
+---@generic T: table, K, V
+---@param tbl T
+---@return fun(table: table<K, V>, index?: K):K, V
+---@return T
 function pairs(tbl) end
