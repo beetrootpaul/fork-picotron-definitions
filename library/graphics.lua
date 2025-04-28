@@ -320,7 +320,7 @@ function sspr(s, sx, sy, sw, sh, dx, dy, dw, dh, flip_x, flip_y) end
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#get_spr)
 ---@param index number
----@return userdata
+---@return Userdata
 function get_spr(index) end
 
 ---Set the sprite (a 2d userdata object of type "u8") for a given index (0..16383).
@@ -329,7 +329,7 @@ function get_spr(index) end
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#set_spr)
 ---@param index number
----@param userdata userdata
+---@param userdata Userdata
 function set_spr(index, userdata) end
 
 ---Set a 4x4 fill pattern using PICO-8 style fill patterns. p is a bitfield in reading order starting from the highest bit.
