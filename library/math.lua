@@ -59,7 +59,9 @@ function sqrt(x) end
 function abs(x) end
 
 ---returns a random number n, 0 <= n < x.
----@param x number
+---
+---rnd() will return number n, 0 <= n < 1
+---@param x number?
 ---@return number
 function rnd(x) end
 
