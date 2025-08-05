@@ -28,20 +28,24 @@ function btnp(b, pl) end
 
 ---returns the state of key k
 ---
----To get the raw layout, use true as the second parameter to indicate that k should be the name of the raw scancode.
+---key() uses the local keyboard layout by default. To get the raw layout, use true as the second parameter to indicate that k should be the name of the raw scancode.
+---
+---key() with no parameters return true when any key is pressed.
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#key)
----@param k string
+---@param k string?
 ---@param raw boolean?
 ---@return boolean
 function key(k, raw) end
 
 ---keyp() has the same behaviour key(), but true when the key is pressed or repeating.
 ---
----To get the raw layout, use true as the second parameter to indicate that k should be the name of the raw scancode.
+---keyp() uses the local keyboard layout by default. To get the raw layout, use true as the second parameter to indicate that k should be the name of the raw scancode.
+---
+---keyp() with no parameters return true when any key is pressed.
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#keyp)
----@param k number
+---@param k number?
 ---@param raw boolean?
 ---@return boolean
 function keyp(k, raw) end
@@ -91,3 +95,17 @@ function mouse() end
 ---@param move_sensitivity number -- 0~4, 1.0 means the cursor continues to move at the same speed.
 ---@return number dx,number dy -- the relative position since the last frame
 function mouselock(lock, event_sensitivity, move_sensitivity) end
+
+---The input function allows terminal programs to be interactive. Execution of the program is blocked until the user enters a response.
+---
+---prompt is a string that is shown to the left of user input. It defaults to "? ".
+---
+---flags:
+---- 0x1 hide the prompt once input() has returned
+---- 0x2 complete the input when a single character is given (do not wait for enter)
+---- 0x4 do not block -- return nil when there is no response that frame
+---
+---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#input)
+---@param prompt string|number?
+---@param flags number?
+function input(prompt, flags) end
