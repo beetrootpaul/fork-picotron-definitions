@@ -45,7 +45,7 @@ function key(k, raw) end
 ---keyp() with no parameters return true when any key is pressed.
 ---
 ---[View Online](https://www.lexaloffle.com/dl/docs/picotron_manual.html#keyp)
----@param k number?
+---@param k string?
 ---@param raw boolean?
 ---@return boolean
 function keyp(k, raw) end
